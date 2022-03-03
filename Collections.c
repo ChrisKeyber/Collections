@@ -136,9 +136,11 @@ int main(){
             }
             FILE * fprewrite = fopen(indexf, "w");
             fprintf(fprewrite, "%d", lastrec);
-            printf("Procedure done, you may close the program");
+            printf("Procedure done, you may close the program\n\n");
+            system("\nPause\n");
         }else if(choice==2){
             printf("\nprogram stopped");
+            system("\nPause\n");
             return 1;
         }
          else if(choice == 3){
@@ -152,26 +154,18 @@ int main(){
                 } else{
                     printf("Not valid, for security, program closed");
                     puts("File not deleted");
+                    system("\nPause\n");
                     return 1;
                 }
             } else {
                 printf("File doesn't exist");
+                system("\nPause\n");
                 return 1;
             }
         }else{
             printf("Invalid number");
+            system("\nPause\n");
             return 1;
         }
     }
 }
-// error handling 
-/*
-int main(){
-    FILE * fp2 = fopen("Num.txt", "r");
-    int rnum;
-    if(fscanf(fp2, "%d", &rnum) == 1){
-        printf("%d", rnum);
-    }
-}
-
-*/
