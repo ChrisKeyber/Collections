@@ -32,4 +32,5 @@ I believe those are the bugs, but if there are any serious bug, please tell me p
 
 
 Log
+
 3/3/2022 Pausing the system for the program to show messages (Which is apparentely a bad practice to do ;) )
