@@ -6,9 +6,13 @@ Im still working on this program currently (actually it is a practice program fr
 It is just a practice program for me like a milestone
 
 
+What is the app doing:
+This program allows you to make a collections of books and it can be modified after that,
+!!!! PLEASE READ THE A BUGS!!!!
+
 bugs
 
-A.
+A.!!!! Major bugs!!!!!
 You can only use this program in the same folder to the file
 if the txt and inx file is not in the same folder to the program, it will rather generate a new file or collapse
 
