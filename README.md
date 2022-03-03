@@ -26,3 +26,10 @@ D.
 I believe those are the bugs, but if there are any serious bug, please tell me p0.0q
 
 (Basically excpet for A, B, if you be a nice dude/girl, the program won't have error :) )
+
+
+
+
+
+Log
+3/3/2022 Pausing the system for the program to show messages (Which is apparentely a bad practice to do ;) )
