@@ -33,6 +33,12 @@ I believe those are the bugs, but if there are any serious bug, please tell me p
 (Basically excpet for A, B, if you be a nice dude/girl, the program won't have error :) )
 
 
+Download here!!
+
+
+
+https://www.mediafire.com/file/ne406f6b3ozwjjw/Collections.exe/file
+
 
 Log
 
