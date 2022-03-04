@@ -39,6 +39,7 @@ When you put a num to index manually, the program cannot find out, the record is
 -----------------
 C.
 Validation of price is not yet ready
+---------------
 
 -------------------------------------------------------------------------------------------------
 
