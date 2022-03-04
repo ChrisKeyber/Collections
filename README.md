@@ -73,10 +73,10 @@ Targets
 Log
 ----
 3/3/2022 : Pausing the system for the program to show messages (Which is apparentely a bad practice to do ;) )
--
+
 
 4/3/2022 : 
--
+
 
 Solve major bug, option 3 can now delete inx file 
 
