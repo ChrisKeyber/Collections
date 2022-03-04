@@ -54,6 +54,10 @@ Targets:
 
 2.provide a user friendly GUI
 
+3.Error Handling
+
+4.More Validation
+
 Log
 
 3/3/2022 : Pausing the system for the program to show messages (Which is apparentely a bad practice to do ;) )
