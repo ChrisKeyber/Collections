@@ -32,7 +32,7 @@ I believe those are the bugs, but if there are any serious bug, please tell me p
 
 
 Download here!!
-
+https://bit.ly/3IGcJC4
 
 Log
 
