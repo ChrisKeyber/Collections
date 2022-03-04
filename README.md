@@ -23,8 +23,6 @@ When you see any error except not valid options,(e.g. index fail, missing, file 
 You have to delete both file manually.
 
 -------------------------------------------------------------------------------------------------
-!!!! PLEASE READ THE A BUGS!!!!
-
 bugs
 ----
 A.!!!! Major bugs!!!!!
