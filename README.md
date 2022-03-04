@@ -8,6 +8,18 @@ It is just a practice program for me like a milestone
 
 What is the app doing:
 This program allows you to make a collections of books and it can be modified after that,
+
+Reminders:
+
+
+When you see any error except not valid options,(e.g. index fail, missing, file missing etc), Your collection record is not in the same format
+
+
+You have to delete both file manually.
+
+
+
+
 !!!! PLEASE READ THE A BUGS!!!!
 
 bugs
@@ -16,19 +28,12 @@ A.!!!! Major bugs!!!!!
 You can only use this program in the same folder to the file
 if the txt and inx file is not in the same folder to the program, it will rather generate a new file or collapse
 
+B.
 
 
 
-C.
-If one of txt or inx is deleted outside the program, please delete the other one also, else the new file
+When you put a num to index manually, the program cannot find out, the record is broken at the time.
 
-using the same name will have error on inx
-
-
-D.
-I believe those are the bugs, but if there are any serious bug, please tell me p0.0q
-
-(Basically excpet for A, B, if you be a nice dude/girl, the program won't have error :) )
 
 
 Download here!!
