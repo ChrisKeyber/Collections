@@ -4,13 +4,14 @@ A Collections of books, actually just a simple practice program for different ba
 
 Im still working on this program currently
 
-
+-------------------------------------------------------------------------------------------------
 
 
 What is the program doing:
 This program allows you to make a collections of books and it can be modified after that,
 
 
+-------------------------------------------------------------------------------------------------
 
 
 Reminders:
@@ -22,6 +23,7 @@ When you see any error except not valid options,(e.g. index fail, missing, file 
 You have to delete both file manually.
 
 
+-------------------------------------------------------------------------------------------------
 
 
 !!!! PLEASE READ THE A BUGS!!!!
@@ -38,13 +40,16 @@ B.
 When you put a num to index manually, the program cannot find out, the record is broken at the time.
 
 
-
+-------------------------------------------------------------------------------------------------
 
 
 Download here!!
 
 
 https://bit.ly/3IGcJC4
+
+
+-------------------------------------------------------------------------------------------------
 
 
 Targets:
@@ -61,6 +66,9 @@ Targets:
 
 
 4.More Validation
+
+
+-------------------------------------------------------------------------------------------------
 
 
 Log
