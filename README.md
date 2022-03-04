@@ -45,6 +45,12 @@ Download here!!
 
 
 https://bit.ly/3IGcJC4
+Targets:
+
+1.Allow user to enter location of creations
+
+
+2.provide a user friendly GUI
 
 Log
 
