@@ -9,7 +9,7 @@ struct books_rec{
     char name [100];
 };
 //file exists error problem
-int file_exists(const char *filename) // https://www.learnc.net/c-tutorial/c-file-exists/ 
+int file_exists(const char *filename)
 {
     FILE *fp = fopen(filename, "r");
     int is_exist = 0;
@@ -95,6 +95,7 @@ int main(){
         fclose(findex);
         printf("File created, you may exit");
         fclose(fpinx);
+        system("Pause");
     } else{
         printf("Collection has already existed, 1 for add rec, 2 for cancel 3 for del: ");
         int choice;
@@ -174,14 +175,3 @@ int main(){
         }
     }
 }
-// error handling 
-/*
-int main(){
-    FILE * fp2 = fopen("Num.txt", "r");
-    int rnum;
-    if(fscanf(fp2, "%d", &rnum) == 1){
-        printf("%d", rnum);
-    }
-}
-
-*/
