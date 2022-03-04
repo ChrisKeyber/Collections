@@ -16,7 +16,7 @@ This program allows you to make a collections of books and it can be modified af
 
 
 Reminders:
-==========
+-------------------
 
 When you see any error except not valid options,(e.g. index fail, missing, file missing etc), Your collection record is not in the same format
 
