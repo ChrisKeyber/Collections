@@ -56,11 +56,11 @@ int main(){
 
     if(file_exists(filename) ==0){
         if(file_exists(indexf)==1){
-            printf("name repeate index");
+            printf("Index exist but record file doesn't");
             return 1;
         }
-        FILE * fpa = fopen(filename, "a");
         FILE * fpw = fopen(filename, "w");
+        FILE * fpa = fopen(filename, "a");
         fprintf(fpw, "Colletion name: %s", collection);
         fclose(fpw);
         printf("How many books in your collection: ");
@@ -90,11 +90,11 @@ int main(){
             fprintf(fpa, "Price: $%d \n\n\n", book[i].price);
         }
 
-        FILE * fin= fopen(indexf, "w");
-        fprintf(fin, "%d", lastrec);
-        fclose(fin);
-
+        FILE * findex= fopen(indexf, "w");
+        fprintf(findex, "%d", lastrec);
+        fclose(findex);
         printf("File created, you may exit");
+        fclose(fpinx);
     } else{
         printf("Collection has already existed, 1 for add rec, 2 for cancel 3 for del: ");
         int choice;
@@ -117,7 +117,7 @@ int main(){
             struct books_rec book[amount] ;
             char name_temp[100], aut_temp[100];
             for(i=0;i<amount;i++){ //collecting 
-                printf("%d. book name: ", ++lastrec);
+                printf("%d. book name: ", ++lastrec);       //index keep adding while getting records
                 gets(name_temp);
                 strcpy(book[i].name, name_temp);
                 printf("Price: ");
@@ -128,14 +128,18 @@ int main(){
                 strcpy(book[i].author, aut_temp);
             }
             printf("\n\n");
+            /*---------------------------------------------------*/
             for(i=0;i<amount;i++){
                 fprintf(fpa, "index:%d\n", lastrec);
                 fprintf(fpa, "Book: %s \n", book[i].name);
                 fprintf(fpa, "By: %s \n", book[i].author);
                 fprintf(fpa, "Price: $%d \n\n\n", book[i].price);
             }
-            FILE * fprewrite = fopen(indexf, "w");
+            /*---------------------------------------------------*/
+            FILE * fprewrite = fopen(indexf, "w");  //For rewriting a index to inx
             fprintf(fprewrite, "%d", lastrec);
+            fclose(fprewrite);
+            /*---------------------------------------------------*/
             printf("Procedure done, you may close the program\n\n");
             system("\nPause\n");
         }else if(choice==2){
@@ -149,6 +153,7 @@ int main(){
                 int choice1;
                 scanf("%d", &choice1);
                 if(choice1 == 1){
+                    fclose(fpinx);
                     remove(indexf);
                     remove(filename);
                 } else{
@@ -169,3 +174,14 @@ int main(){
         }
     }
 }
+// error handling 
+/*
+int main(){
+    FILE * fp2 = fopen("Num.txt", "r");
+    int rnum;
+    if(fscanf(fp2, "%d", &rnum) == 1){
+        printf("%d", rnum);
+    }
+}
+
+*/
