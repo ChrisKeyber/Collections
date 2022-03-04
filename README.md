@@ -33,10 +33,10 @@ if the txt and inx file is not in the same folder to the program, it will rather
 ---------------
 B.
 When you put a num to index manually, the program cannot find out, the record is broken at the time.
------------------
+------
 C.
 Validation of price is not yet ready
----------------
+-----
 
 -------------------------------------------------------------------------------------------------
 
