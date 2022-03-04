@@ -34,10 +34,6 @@ I believe those are the bugs, but if there are any serious bug, please tell me p
 Download here!!
 
 
-
-https://www.mediafire.com/file/ne406f6b3ozwjjw/Collections.exe/file
-
-
 Log
 
 3/3/2022 : Pausing the system for the program to show messages (Which is apparentely a bad practice to do ;) )
