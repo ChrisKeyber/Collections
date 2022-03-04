@@ -7,7 +7,8 @@ Im still working on this program currently
 -------------------------------------------------------------------------------------------------
 
 
-What is the program doing:
+What is the program doing
+--------------------------
 This program allows you to make a collections of books and it can be modified after that,
 
 
