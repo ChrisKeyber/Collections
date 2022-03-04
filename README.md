@@ -26,17 +26,18 @@ You have to delete both file manually.
 !!!! PLEASE READ THE A BUGS!!!!
 
 bugs
-
+----
 A.!!!! Major bugs!!!!!
 You can only use this program in the same folder to the file
 if the txt and inx file is not in the same folder to the program, it will rather generate a new file or collapse
----------------
+
+
 B.
 When you put a num to index manually, the program cannot find out, the record is broken at the time.
-------
+
+
 C.
 Validation of price is not yet ready
------
 
 -------------------------------------------------------------------------------------------------
 
