@@ -2,11 +2,10 @@
 A Collections of books, actually just a simple practice program for different basics
 
 
-Im still working on this program currently (actually it is a practice program from my learning e.g string, array, validate, functions, struct etc)
-It is just a practice program for me like a milestone
+Im still working on this program currently
 
 
-What is the app doing:
+What is the program doing:
 This program allows you to make a collections of books and it can be modified after that,
 
 Reminders:
