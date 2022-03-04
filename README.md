@@ -50,7 +50,8 @@ https://bit.ly/3IGcJC4
 -------------------------------------------------------------------------------------------------
 
 
-Targets:
+Targets
+---------
 
 1.Allow user to enter location of creations
 
@@ -70,13 +71,12 @@ Targets:
 
 
 Log
-
+----
 3/3/2022 : Pausing the system for the program to show messages (Which is apparentely a bad practice to do ;) )
-
-
+-
 
 4/3/2022 : 
-
+-
 
 Solve major bug, option 3 can now delete inx file 
 
