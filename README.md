@@ -34,10 +34,6 @@ if the txt and inx file is not in the same folder to the program, it will rather
 B.
 When you put a num to index manually, the program cannot find out, the record is broken at the time.
 
-
-C.
-Validation of price is not yet ready
-
 -------------------------------------------------------------------------------------------------
 
 
@@ -82,4 +78,11 @@ Solve major bug, option 3 can now delete inx file
 
 
 program won't close without message when create new collections
+
+5/3/2022 :
+
+Solve major bugs, Numeric validation is done
+
+
+Remove choosing other option(File dupicated) cause program end
          
