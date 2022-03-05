@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include <ctype.h>
+//put error into a txt file called errored, with time, Error type in it
 struct books_rec{
     int price;
     char author[100];
@@ -21,14 +22,14 @@ int file_exists(const char *filename)
     return is_exist;
 }
 
-int valindex(const char *filename){
+int valindex(const char *filename){ //filename = indexf
     int boo= 0;
     FILE *fp = fopen(filename, "r");
     if(file_exists(filename)==0){
         boo = 1;
     }
-    char check[500]; //48-57, 0-9
-    fgets(check, 500, fp);
+    char check[500]; 
+    fgets(check, 500, fp); //getting each character into one data slot
     for(int i=0;i<strlen(check);i++){
         if(check[i]<48 || check[i]>57){
             boo = 1;
@@ -65,7 +66,11 @@ int main(){
         fclose(fpw);
         printf("How many books in your collection: ");
         int amount;
-        scanf("%d", &amount);
+        while(scanf("%d", &amount) == 0){
+            printf("Enter number!\nHow many books in your collection: ");
+            fflush(stdin);
+        }
+
         fflush(stdin);
         struct books_rec book[amount] ;
 
@@ -76,7 +81,10 @@ int main(){
             gets(name_temp);
             strcpy(book[i].name, name_temp);
             printf("Price: ");
-            scanf("%d", &book[i].price);
+            while(scanf("%d", &book[i].price) == 0){
+                printf("Enter number!\nPrice: ");
+                fflush(stdin);
+            }
             fflush(stdin);
             printf("Author name: ");
             gets(aut_temp);
@@ -96,11 +104,17 @@ int main(){
         printf("File created, you may exit");
         fclose(fpinx);
         system("Pause");
-    } else{
+    } 
+    else{
         printf("Collection has already existed, 1 for add rec, 2 for cancel 3 for del: ");
         int choice;
         scanf("%d", &choice);
         fflush(stdin);
+        while(choice<0 || choice>3){
+            printf("Not valid, Retry: ");
+            scanf("%d", &choice);
+            fflush(stdin);
+        }
         if(choice == 1){
             FILE * fpa = fopen(filename, "a");
             if(valindex(indexf)==1){
@@ -113,7 +127,10 @@ int main(){
             fscanf(fpinx, "%d", &lastrec);
             printf("How many books you want to add: ");
             int amount;
-            scanf("%d", &amount);
+            while(scanf("%d", &amount) == 0){
+                printf("Enter number!\nHow many books in your collection: ");
+                fflush(stdin);
+            }
             fflush(stdin);
             struct books_rec book[amount] ;
             char name_temp[100], aut_temp[100];
@@ -122,7 +139,10 @@ int main(){
                 gets(name_temp);
                 strcpy(book[i].name, name_temp);
                 printf("Price: ");
-                scanf("%d", &book[i].price);
+                while(scanf("%d", &book[i].price) == 0){
+                    printf("Enter number!\nPrice: ");
+                    fflush(stdin);
+                }
                 fflush(stdin);
                 printf("Author name: ");
                 gets(aut_temp);
@@ -143,12 +163,15 @@ int main(){
             /*---------------------------------------------------*/
             printf("Procedure done, you may close the program\n\n");
             system("\nPause\n");
-        }else if(choice==2){
+        }
+
+        if(choice==2){
             printf("\nprogram stopped");
             system("\nPause\n");
             return 1;
         }
-         else if(choice == 3){
+
+        if(choice == 3){
             if(file_exists(filename) == 1){
                 printf("Are you sure you want to delete this? type 1 for yes 0 for no: ");
                 int choice1;
@@ -168,10 +191,6 @@ int main(){
                 system("\nPause\n");
                 return 1;
             }
-        }else{
-            printf("Invalid number");
-            system("\nPause\n");
-            return 1;
-        }
+        }   
     }
 }
