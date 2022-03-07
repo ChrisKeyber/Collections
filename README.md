@@ -64,6 +64,8 @@ Targets
 2. Records processing (delete, change etc)
 
 
+3.Error codes will have times
+
 
 -------------------------------------------------------------------------------------------------
 
