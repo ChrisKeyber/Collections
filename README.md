@@ -66,7 +66,7 @@ Targets
 -------------------------------------------------------------------------------------------------
 
 
-Log
+Log (bug fixed will post here but major and minor change will be put in release)
 ----
 3/3/2022 : Pausing the system for the program to show messages (Which is apparentely a bad practice to do ;) )
 
