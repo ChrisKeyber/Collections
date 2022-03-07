@@ -48,25 +48,17 @@ https://bit.ly/3IGcJC4
 
 Targets
 ---------
-
-1.Create a new collections folder in the same folder with the exe(If GUI version is out, it will allow user to search the location)
-
-
-2.provide a user friendly GUI
+1. Run in window not terminal (Full program restructed)
 
 
+2. Records processing (delete, change etc)
 
-3.Error Handling
-
-
-
-4.More Validation
 
 
 -------------------------------------------------------------------------------------------------
 
 
-Log (bug fixed will post here but major and minor change will be put in release)
+Log (bug fixed will post here)
 ----
 3/3/2022 : Pausing the system for the program to show messages (Which is apparentely a bad practice to do ;) )
 
