@@ -27,13 +27,23 @@ You have to delete both file manually.
 bugs
 ----
 A.!!!! Major bugs!!!!!
+
+
 You can only use this program in the same folder to the file
 if the txt and inx file is not in the same folder to the program, it will rather generate a new file or collapse
 
 
 B.
+
+
+
 When you put a num to index manually, the program cannot find out, the record is broken at the time.
 
+C.
+
+
+
+Price can be only integer but not float
 -------------------------------------------------------------------------------------------------
 
 
@@ -77,4 +87,11 @@ Solve major bugs, Numeric validation is done
 
 
 Remove choosing other option(File dupicated) cause program end
+
+7/3/2022:
+
+Solve major bugs, A folder will be created in the same directory for more info for the release :
+
+
+Minor bugs: Choice validate completed, for more info see upper
          
