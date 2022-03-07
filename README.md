@@ -42,8 +42,8 @@ When you put a num to index manually, the program cannot find out, the record is
 C.
 
 
-
 Price can be only integer but not float
+
 -------------------------------------------------------------------------------------------------
 
 
