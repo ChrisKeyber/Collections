@@ -87,7 +87,7 @@ Remove choosing other option(File dupicated) cause program end
 
 7/3/2022:
 
-Solve major bugs, A folder will be created in the same directory for more info for the release : https://bit.ly/3vLCahS
+Solve major bugs, A folder will be created in the same directory for more info check for the release : https://bit.ly/3vLCahS
 
 
 Minor bugs: Choice validate completed, for more info see upper
