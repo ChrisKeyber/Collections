@@ -96,6 +96,7 @@ Release link
 ------------
 1.0:
 
+https://github.com/ChrisKeyber/Collections/releases/tag/v1.0
 
 1.1:
 
