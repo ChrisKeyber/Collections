@@ -37,7 +37,7 @@ When you put a num to index manually, your index start from the number you enter
 B.
 
 
-Price can be only integer but not float
+when input price with a number but a character after it, it cannot finds out
 
 -------------------------------------------------------------------------------------------------
 
@@ -59,7 +59,7 @@ Targets
 2. Records processing (search, delete, change etc)
 
 
-3.Error codes will have times
+3.Delete functions will split, for easier way for deleting bunch of files easily
 
 
 -------------------------------------------------------------------------------------------------
