@@ -65,7 +65,7 @@ Targets
 -------------------------------------------------------------------------------------------------
 
 
-Log (bug fixed will post here)
+Release link
 ----
 3/3/2022 : Pausing the system for the program to show messages (Which is apparentely a bad practice to do ;) )
 
@@ -91,4 +91,9 @@ Solve major bugs, A folder will be created in the same directory for more info c
 
 
 Minor bugs: Choice validate completed, for more info see upper
+
+10/3/2022: 1.1.1 released
+
+
+https://github.com/ChrisKeyber/Collections/releases/tag/v1.1.1
          
