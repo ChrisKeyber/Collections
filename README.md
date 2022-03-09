@@ -56,7 +56,7 @@ Targets
 1. Run in window not terminal (Full program restructed)
 
 
-2. Records processing (delete, change etc)
+2. Records processing (search, delete, change etc)
 
 
 3.Error codes will have times
