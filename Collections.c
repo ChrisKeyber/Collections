@@ -8,7 +8,7 @@
 #include <time.h>
 //put error into a txt file called errored, with time, Error type in it
 struct books_rec{
-    int price;
+    float price;
     char author[100];
     char name [100];
 };
@@ -56,11 +56,25 @@ int count_files(char directory[]){
     DIR * dp = opendir(directory);
     struct dirent* entity;
     entity = readdir(dp);
+    if(entity==NULL){
+        return 0;
+    }
     while(entity!=NULL){
         filesnum++;
         entity =  readdir(dp);
     }
-    return filesnum;
+    return filesnum-2;
+}
+const char *time_for(){
+    time_t now = time(NULL);
+    struct tm*loc = localtime(&now);
+    int date = loc->tm_mday; //0 is jan
+    int month = loc->tm_mon;
+    int year = loc->tm_year; //start from 1900
+    char format[100];
+    strftime(format, 100, "%d/%m/%Y", loc);
+    char *re = format;
+    return re;
 }
 
 // num 5
@@ -109,21 +123,33 @@ int main(){
     if(file_exists(direname, filetxt) ==0){
         FILE* fperrorw = fopen(com_erlog, "w");
         FILE* fperrora = fopen(com_erlog, "a");
+        fprintf(fperrora, "Today is: %s\n\n", time_for());
         if(file_exists(direname, indexf)==1){
-            printf("Index exist but record file doesn't"); 
-            fprintf(fperrora, "Missing files: txt(suggested delete folder)\n\n");
-            return 1;
+            printf("Index exist but record file doesn't\n\n"); 
+            fprintf(fperrora, "%s Missing files: txt\n\n");
+            int choice;
+            printf("Delete index and restart? 1 for yes 0 for no: ");
+            while(scanf("%d", &choice)==0 &&choice>1||choice<0){
+                printf("Invalid\n\n");
+                fprintf(fperrora, "Invalid input: initialize files branch\n\n");
+            }
+            if(choice == 0){
+                fprintf(fperrora, "Closing acitivity: Initializing files\n\n");
+                return 1;
+            
+            } else{
+                remove(com_indexf);
+            }
         }
         if(opendir(direname)!=0 && file_exists(direname, filetxt)==0 && file_exists(direname, indexf)==0 && file_exists(direname, error_log)==0){
             printf("Warn!: detected existing folder");
             fprintf(fperrora, "Warning: Existing files detected\n\n");
             int openchoice ;
             printf("Process? 1 for yes, 0 for no: \n");
-            scanf("%d", &openchoice);
-            while(openchoice!=0 && openchoice !=1){
+            while(scanf("%d", &openchoice)==0 &&openchoice!=0 && openchoice !=1){
                 fflush(stdin);
                 printf("Invalid: ");
-                scanf("%d", &openchoice);
+                fprintf(fperrora, "Invalid input: existing folder branch\n\n");
             }
             if(openchoice == 0){
                 fprintf(fperrora, "Closing activity: stopped adding new records to existing files\n\n");
@@ -155,7 +181,7 @@ int main(){
             gets(name_temp);
             strcpy(book[i].name, name_temp);
             printf("Price: ");
-            while(scanf("%d", &book[i].price) == 0){
+            while(scanf("%f", &book[i].price) == 0){
                 printf("Enter number!\nPrice: ");
                 fprintf(fperrora, "Invalid input: Books prices\n\n");
                 fflush(stdin);
@@ -170,7 +196,7 @@ int main(){
             fprintf(fpa, "Index:%d \n", i+1);
             fprintf(fpa, "Book: %s \n", book[i].name);
             fprintf(fpa, "By: %s \n", book[i].author);
-            fprintf(fpa, "Price: $%d \n\n", book[i].price);
+            fprintf(fpa, "Price: $%.2f \n\n", book[i].price);
         }
 
         FILE * findex= fopen(com_indexf, "w");
@@ -178,19 +204,31 @@ int main(){
         fclose(findex);
         printf("Collection file created, you may exit\n\n");
         fclose(fpinxr);
+        fclose(findex);
+        fclose(fpa);
+        char fordirtxt[100] = "start ./";
+        strcat(fordirtxt, "\"");
+        strcat(fordirtxt, direname);
+        strcat(fordirtxt, "\"");
+        strcat(fordirtxt, "//");
+        strcat(fordirtxt, "\"");
+        strcat(fordirtxt, filetxt);
+        strcat(fordirtxt, "\"");
+        system(fordirtxt);
         system("Pause");
     } 
     else{
         FILE* fperrora = fopen(com_erlog, "a");
+        fprintf(fperrora, "Today is: %s\n\n", time_for());
         printf("Collection has already existed, 1 for add rec, 2 for cancel 3 for del: ");
         int choice;
-        while(scanf("%d", &choice)==0 && choice<1 || choice>3){
+        while(scanf("%d", &choice)==0 || (choice<1 || choice>3)){
             printf("Not valid, Retry: ");
-            fprintf(fperrora, "Invalid input: dupicated files branch selections\n\n");
+            fprintf(fperrora, "Invalid input: duplicated files branch selections\n\n");
             fflush(stdin);
         }
         if(choice == 1){
-            if(count_files(direname)>5){
+            if(count_files(direname)>3){
             printf("Warn!: Folder contain unneccessary content\n");
             fprintf(fperrora, "Warning: Folder contain unneccessary content\n\n");
             int openchoice ;
@@ -210,7 +248,6 @@ int main(){
             }
         }
             FILE * fpa = fopen(com_filetxt, "a");
-
             if(valindex(direname, indexf)==1){
                 printf("Index is missing");
                 fprintf(fperrora, "Missing Files: Index\n\n");
@@ -237,7 +274,7 @@ int main(){
                 gets(name_temp);
                 strcpy(book[i].name, name_temp);
                 printf("Price: ");
-                while(scanf("%d", &book[i].price) == 0){
+                while(scanf("%f", &book[i].price) == 0){
                     printf("Enter number!\nPrice: ");
                     fprintf(fperrora, "Invalid input: price of books\n\n");
                     fflush(stdin);
@@ -253,7 +290,7 @@ int main(){
                 fprintf(fpa, "index:%d\n", lastrec);
                 fprintf(fpa, "Book: %s \n", book[i].name);
                 fprintf(fpa, "By: %s \n", book[i].author);
-                fprintf(fpa, "Price: $%d \n\n\n", book[i].price);
+                fprintf(fpa, "Price: $%.2f \n\n\n", book[i].price);
             }
             /*---------------------------------------------------*/
             FILE * fprewrite = fopen(com_indexf, "w");  //For rewriting a index to inx
@@ -261,6 +298,16 @@ int main(){
             fclose(fprewrite);
             /*---------------------------------------------------*/
             printf("Procedure done, you may close the program\n\n");
+            fclose(fpa);
+            char fordirtxt[100] = "start ./";
+            strcat(fordirtxt, "\"");
+            strcat(fordirtxt, direname);
+            strcat(fordirtxt, "\"");
+            strcat(fordirtxt, "//");
+            strcat(fordirtxt, "\"");
+            strcat(fordirtxt, filetxt);
+            strcat(fordirtxt, "\"");
+            system(fordirtxt);
             system("\nPause\n");
         }
 
@@ -287,9 +334,18 @@ int main(){
                     remove(com_indexf);
                     remove(com_erlog);
                     rmdir(direname);
-                    FILE * fpdeleted = fopen("Deleted reminders.txt", "w");
-                    fprintf(fpdeleted, "Your collections: \"%s\" has been deleted, you can delete this file now", collection);
+                    if(file_exists("./","Deleted_reminders.txt")==0){
+                        FILE * fpdeleted = fopen("Deleted_reminders.txt", "w");
+                        fprintf(fpdeleted, "Your collections: \"%s\" has been deleted\n\n", collection);
+                        fclose(fpdeleted);
+                    } else{
+                        FILE * fpdeleteda= fopen("Deleted_reminders.txt", "a");
+                        fprintf(fpdeleteda, "Your collections: \"%s\" has been deleted\n\n", collection);
+                        fclose(fpdeleteda);
+                    }
+
                     puts("Files are deleted");
+                    system("Start .//Deleted_reminders.txt");
                     system("Pause");
                     return 1;
                 } else if(choice ==0 ){
