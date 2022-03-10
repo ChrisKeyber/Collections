@@ -18,10 +18,9 @@ This program allows you to make a collections of books and it can be modified af
 Reminders:
 -------------------
 
-When you see any error except not valid options,(e.g. index fail, missing, file missing etc), Your collection record is not in the same format
-
-
-You have to delete both file manually.
+Handling of missing files:
+1. missing txt files, you can remake a collection in the exe
+2. missing index files, you need to make a new inx file but input the last index number of your collection
 
 -------------------------------------------------------------------------------------------------
 bugs
