@@ -102,4 +102,4 @@ https://bit.ly/3vLCahS
 1.2
 
 
-https://github.com/ChrisKeyber/Collections/releases/tag/v1.1.1
+https://github.com/ChrisKeyber/Collections/releases/tag/v1.2
