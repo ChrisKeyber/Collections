@@ -40,7 +40,7 @@ when input price with a number but a character after it, it cannot finds out
 
 C.
 
-WHen your input is over 100 characters, program might error
+When your input is over 100 characters, program might error
 
 -------------------------------------------------------------------------------------------------
 
