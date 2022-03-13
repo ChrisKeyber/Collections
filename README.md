@@ -38,6 +38,10 @@ B.
 
 when input price with a number but a character after it, it cannot finds out
 
+C.
+
+WHen your input is over 100 characters, program might error
+
 -------------------------------------------------------------------------------------------------
 
 
@@ -53,8 +57,9 @@ https://bit.ly/3IGcJC4
 Targets
 ---------
 1. Run in window not terminal (Full program restructed)
-3. Records processing (search, delete, change etc)
-4. Delete functions will split, for easier way for deleting bunch of files 
+2. Records processing (search, delete, change etc)
+3. Delete functions will split, for easier way for deleting bunch of files 
+4. Turnning all strings to dynamic to fix bug C
 
 
 
